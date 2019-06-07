@@ -2,4 +2,4 @@
 
 echo "Running composer install";
 
-composer --no-ansi --no-interaction --working-dir=$APPLICATION_ROOT/src --optimize-autoloader --no-dev install
+composer --no-ansi --no-interaction --working-dir=$APPLICATION_ROOT --optimize-autoloader --no-dev install
