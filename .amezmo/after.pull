@@ -2,6 +2,17 @@
 
 echo "Running composer install";
 
-composer --no-ansi --no-interaction --working-dir=$APPLICATION_ROOT --optimize-autoloader --no-dev install
+composer \
+    --no-ansi \
+    --no-interaction \
+    --working-dir=$APPLICATION_ROOT/src \
+    --optimize-autoloader \
+    --no-plugins \
+    --no-scripts \
+    --no-dev install
 
+echo "Changing directory to $APPLICATION_ROOT"
+cd $APPLICATION_ROOT;
+
+echo "Generating application key";
 php $APPLICATION_ROOT/artisan key:generate
