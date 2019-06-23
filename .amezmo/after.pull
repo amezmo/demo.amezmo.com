@@ -5,7 +5,7 @@ echo "Running composer install";
 composer \
     --no-ansi \
     --no-interaction \
-    --working-dir=$APPLICATION_ROOT/src \
+    --working-dir=$APPLICATION_ROOT \
     --optimize-autoloader \
     --no-plugins \
     --no-scripts \
