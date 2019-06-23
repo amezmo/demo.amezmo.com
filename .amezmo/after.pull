@@ -15,4 +15,4 @@ echo "Changing directory to $APPLICATION_ROOT"
 cd $APPLICATION_ROOT;
 
 echo "Generating application key";
-php $APPLICATION_ROOT/artisan key:generate
+php artisan key:generate
