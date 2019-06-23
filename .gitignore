@@ -9,3 +9,6 @@ Homestead.yaml
 npm-debug.log
 yarn-error.log
 *.log
+/storage/logs/*.log
+/storage/framework/*.php
+storage/framework/views/*.php
