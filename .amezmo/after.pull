@@ -16,3 +16,4 @@ cd $APPLICATION_ROOT;
 
 echo "Generating application key";
 php artisan key:generate
+
