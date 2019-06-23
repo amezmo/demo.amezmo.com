@@ -3,8 +3,5 @@
 echo "Running composer install";
 
 composer --no-ansi --no-interaction --working-dir=$APPLICATION_ROOT --optimize-autoloader --no-dev install
-<<<<<<< HEAD
 
 php $APPLICATION_ROOT/artisan key:generate
-=======
->>>>>>> d8786ad288ce921ee5c24d9f34af226188ff7306
