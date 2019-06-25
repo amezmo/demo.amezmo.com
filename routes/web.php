@@ -17,3 +17,8 @@ Route::get('/', function () {
     Log::info('Hello World, this is your log entry');
     return view('welcome');
 });
+
+Route::get('/hello', function () {
+    Log::info('Testing');
+    return view('hello');
+});
