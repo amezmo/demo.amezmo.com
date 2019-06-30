@@ -8,6 +8,7 @@
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
+        <link href="/css/app.css" rel="stylesheet">
 
         <!-- Styles -->
         <style>
@@ -70,42 +71,34 @@
     </head>
     <body>
         <div class="flex-center position-ref full-height">
-            @if (Route::has('login'))
-                <div class="top-right links">
-                    @auth
-                        <a href="{{ url('/home') }}">Home</a>
-                    @else
-                        <a href="{{ route('login') }}">Login</a>
-
-                        @if (Route::has('register'))
-                            <a href="{{ route('register') }}">Register</a>
-                        @endif
-                    @endauth
-                </div>
-            @endif
-
             <div class="content">
-                <div class="title m-b-md">
+                <h1>
                     Queue tutorial
-                </div>
+                </h1>
 
-                @if(session('queue_success'))
-                <div class="alert alert-success">
-                    Great! Now go to the Amezmo Dashboard and view the logs for your Queue.
-                </div>
-                @endif
-                <p>
-                    This project has a default redis connection queue setup. To setup your queue,
-                    make sure you go to Workers > New and provide the following command
-                    <code>php /webroot/artisan queue:work redis --sleep=10 --tries=1 -vvv</code>
-                </p>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            @if(session('queue_success'))
+                            <div class="alert alert-success">
+                                Great! Now go to the Amezmo Dashboard and view the logs for your Queue.
+                            </div>
+                            @endif
+                            <p>
+                                This project has a default redis connection queue setup. To setup your queue,
+                                make sure you go to Workers > New and provide the following command
+                                <code>php /webroot/artisan queue:work redis --sleep=10 --tries=1 -vvv</code>
+                            </p>
 
-                <p>To test your queue, and see the log output, you can hit the following endpoint. This simply
-                    dispatches the
-                    <a href="https://github.com/amezmo/demo.amezmo.com/blob/master/app/Jobs/TestJob.php">TestJob</a> class
-                    onto the default queue.
-                    <a href="/queue-test">Dispatch TestJob</a>
-                </p>
+                            <p>To test your queue, and see the log output, you can hit the following endpoint. This simply
+                                dispatches the
+                                <a href="https://github.com/amezmo/demo.amezmo.com/blob/master/app/Jobs/TestJob.php">TestJob</a> class
+                                onto the default queue.
+                                <a href="/test-queues">Click here to Dispatch TestJob</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
 
                 <div class="links">
                     <a href="/queues">Queue tutorial</a>
