@@ -11,13 +11,6 @@ composer \
     --no-scripts \
     --no-dev install
 
-echo "Installing predis";
-composer \
-    --no-ansi \
-    --no-interaction \
-    --working-dir=$APPLICATION_ROOT \
-    require predis/predis
-
 echo "Changing directory to $APPLICATION_ROOT"
 cd $APPLICATION_ROOT;
 
