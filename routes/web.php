@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Log;
 
+use App\Jobs\TestJob;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -21,4 +23,13 @@ Route::get('/', function () {
 Route::get('/hello', function () {
     Log::info('Testing');
     return view('hello');
+});
+
+Route::get('/queues', function () {
+    return view('queues');
+});
+
+Route::get('test-queues', function () {
+    dispatch(new TestJob());
+    return redirec('/queues')->with('queue_success', true);
 });
