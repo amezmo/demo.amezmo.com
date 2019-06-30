@@ -83,7 +83,9 @@
                 <div class="title m-b-md">
                     Hello, World!
                 </div>
-
+                <p>
+                    <a href="/queues">Queue tutorial</a>
+                </p>
                 <div class="links">
                     <a href="/hello">Docs</a>
                     <a href="https://laravel.com/docs">Docs</a>
