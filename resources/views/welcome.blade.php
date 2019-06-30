@@ -24,6 +24,10 @@
                 height: 100vh;
             }
 
+            a {
+                color: #0178ff;
+            }
+
             .flex-center {
                 align-items: center;
                 display: flex;
@@ -85,6 +89,7 @@
                 </div>
 
                 <div class="links">
+                    <a href="/queues">Queue tutorial</a>
                     <a href="/hello">Hello</a>
                     <a href="https://laravel.com/docs">Docs</a>
                     <a href="https://laracasts.com">Laracasts</a>

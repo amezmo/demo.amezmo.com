@@ -20,6 +20,11 @@
                 margin: 0;
             }
 
+            a {
+                color: #0178ff;
+            }
+
+
             .full-height {
                 height: 100vh;
             }
@@ -99,11 +104,12 @@
                     dispatches the
                     <a href="https://github.com/amezmo/demo.amezmo.com/blob/master/app/Jobs/TestJob.php">TestJob</a> class
                     onto the default queue.
+                    <a href="/queue-test">Dispatch TestJob</a>
                 </p>
 
-                <a href="/queue-test">Dispatch TestJob</a>
                 <div class="links">
-                    <a href="/queues">Hello</a>
+                    <a href="/queues">Queue tutorial</a>
+                    <a href="/hello">Hello</a>
                     <a href="https://laravel.com/docs">Docs</a>
                     <a href="https://laracasts.com">Laracasts</a>
                     <a href="https://laravel-news.com">News</a>

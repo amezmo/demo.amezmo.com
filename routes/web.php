@@ -26,10 +26,10 @@ Route::get('/hello', function () {
 });
 
 Route::get('/queues', function () {
-    return view('queues');
+    return view('queue');
 });
 
 Route::get('test-queues', function () {
     dispatch(new TestJob());
-    return redirec('/queues')->with('queue_success', true);
+    return redirect('/queues')->with('queue_success', true);
 });

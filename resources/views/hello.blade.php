@@ -20,6 +20,10 @@
                 margin: 0;
             }
 
+            a {
+                color: #0178ff;
+            }
+
             .full-height {
                 height: 100vh;
             }
@@ -83,11 +87,9 @@
                 <div class="title m-b-md">
                     Hello, World!
                 </div>
-                <p>
-                    <a href="/queues">Queue tutorial</a>
-                </p>
                 <div class="links">
-                    <a href="/hello">Docs</a>
+                    <a href="/queues">Queue tutorial</a>
+                    <a href="/hello">Hello</a>
                     <a href="https://laravel.com/docs">Docs</a>
                     <a href="https://laracasts.com">Laracasts</a>
                     <a href="https://laravel-news.com">News</a>
