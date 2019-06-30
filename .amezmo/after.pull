@@ -16,10 +16,6 @@ composer \
     --no-ansi \
     --no-interaction \
     --working-dir=$APPLICATION_ROOT \
-    --optimize-autoloader \
-    --no-plugins \
-    --no-scripts \
-    --no-dev \
     require predis/predis
 
 echo "Changing directory to $APPLICATION_ROOT"
