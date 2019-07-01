@@ -9,7 +9,6 @@ composer \
     --no-ansi \
     --no-interaction \
     --working-dir=$APPLICATION_ROOT \
-    --working-dir=/webroot \
     --optimize-autoloader \
     --no-progress \
     --no-dev \
