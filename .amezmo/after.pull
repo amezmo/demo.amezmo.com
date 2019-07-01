@@ -1,16 +1,17 @@
 #!/bin/bash
 
+echo "Changing directory to $APPLICATION_ROOT"
+cd $APPLICATION_ROOT;
+
 echo "Running composer install";
 
 composer \
     --no-ansi \
     --no-interaction \
     --working-dir=$APPLICATION_ROOT \
+    --working-dir=/webroot \
     --optimize-autoloader \
-    --no-plugins \
-    --no-scripts \
-    --no-dev install
-
-echo "Changing directory to $APPLICATION_ROOT"
-cd $APPLICATION_ROOT;
-
+    --no-progress \
+    --no-dev \
+    --profile \
+    install
