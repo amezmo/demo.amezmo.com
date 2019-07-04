@@ -33,3 +33,12 @@ Route::get('test-queues', function () {
     dispatch(new TestJob());
     return redirect('/queues')->with('queue_success', true);
 });
+
+
+Route::get('/posts', function() {
+    return view('posts.create');
+});
+
+Route::post('/posts', function() {
+    return redirect('/posts');
+});
