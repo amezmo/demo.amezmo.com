@@ -15,4 +15,4 @@ composer \
     --profile \
     install
 
-php artisan migrate;
+php artisan migrate --no-interaction --no-ansi --force;
