@@ -85,7 +85,7 @@
                     </div>
 
                     <div class="row pb-3">
-                        <div class="col-lg-12">
+                        <div class="col-lg-12 text-left">
                             <pre>{{ $posts }}</pre>
                         </div>
                     </div>
