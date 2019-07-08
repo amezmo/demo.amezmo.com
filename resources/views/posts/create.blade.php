@@ -86,7 +86,10 @@
                             <form action="/posts" method="POST">
                                 @csrf
                                 <div class="form-group">
-                                    <input type="text" class="form-control" placeholder="Post title">
+                                    <input type="text" class="form-control" name="title" placeholder="Post title">
+                                </div>
+                                <div class="form-group">
+                                    <textarea class="form-control" name="body" placeholder="Your post body">
                                 </div>
                                 <div class="form-group">
                                     <button type="submit" class="btn btn-primary">Create Post</button>
