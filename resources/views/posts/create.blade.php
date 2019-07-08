@@ -73,7 +73,7 @@
         <div class="flex-center position-ref full-height">
             <div class="content">
                 <div class="container">
-                    <div class="row">
+                    <div class="row pb-3">
                         <div class="col-lg-12 justify-content-center">
                             <h1>
                                 Create a new post
@@ -81,8 +81,8 @@
                         </div>
                     </div>
 
-                    <div class="row">
-                        <div class="col-lg-6">
+                    <div class="row pb-3">
+                        <div class="col-lg-12 justify-content-center">
                             <form action="/posts" method="POST">
                                 <div class="form-group">
                                     <input type="text" class="form-control" placeholder="Post title">
