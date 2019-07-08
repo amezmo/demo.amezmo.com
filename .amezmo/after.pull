@@ -1,14 +1,10 @@
 #!/bin/bash
 
-echo "Changing directory to $APPLICATION_ROOT"
-cd $APPLICATION_ROOT;
-
 echo "Running composer install";
 
 composer \
     --no-ansi \
     --no-interaction \
-    --working-dir=$APPLICATION_ROOT \
     --optimize-autoloader \
     --no-progress \
     --no-dev \
