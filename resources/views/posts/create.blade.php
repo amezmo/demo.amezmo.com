@@ -72,19 +72,23 @@
     <body>
         <div class="flex-center position-ref full-height">
             <div class="content">
-                <h1>
-                    Queue tutorial
-                </h1>
-
                 <div class="container">
                     <div class="row">
-                        <div class="col-lg-12">
+                        <div class="col-lg-12 justify-content-center">
+                            <h1>
+                                Create a new post
+                            </h1>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-lg-6">
                             <form action="/posts" method="POST">
                                 <div class="form-group">
                                     <input type="text" class="form-control" placeholder="Post title">
                                 </div>
                                 <div class="form-group">
-                                    <button type="button" class="btn btn-primary">Submit</button>
+                                    <button type="button" class="btn btn-primary">Create Post</button>
                                 </div>
                             </form>
                         </div>
