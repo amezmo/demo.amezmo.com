@@ -89,7 +89,7 @@
                                     <input type="text" class="form-control" name="title" placeholder="Post title">
                                 </div>
                                 <div class="form-group">
-                                    <textarea class="form-control" name="body" placeholder="Your post body">
+                                    <textarea rows="4" class="form-control" name="body" placeholder="Your post body"></textarea>
                                 </div>
                                 <div class="form-group">
                                     <button type="submit" class="btn btn-primary">Create Post</button>
