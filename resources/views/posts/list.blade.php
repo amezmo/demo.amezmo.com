@@ -85,10 +85,8 @@
                     </div>
 
                     <div class="row pb-3">
-                        <div class="col-lg-12 justify-content-center">
-                            <pre>
-                                {{ $posts }}
-                            </pre>
+                        <div class="col-lg-12">
+                            <pre>{{ $posts }}</pre>
                         </div>
                     </div>
                 </div>

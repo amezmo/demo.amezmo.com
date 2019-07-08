@@ -45,5 +45,6 @@ Route::get('/posts/new', function() {
 });
 
 Route::post('/posts', function() {
+    throw new \Exception('Test');
     return redirect('/posts');
 });
