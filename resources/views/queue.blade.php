@@ -104,7 +104,7 @@
                     <div class="links">
                         <a href="/queues">Queue tutorial</a>
                         <a href="/hello">Hello</a>
-                        <a href="/posts">Database Tutorial</a>
+                        <a href="/posts/new">Database Tutorial</a>
                         <a href="https://docs.amezmo.com">Amezmo Docs</a>
                     </div>
                 </div>

@@ -84,11 +84,12 @@
                     <div class="row pb-3">
                         <div class="col-lg-12 justify-content-center">
                             <form action="/posts" method="POST">
+                                @csrf
                                 <div class="form-group">
                                     <input type="text" class="form-control" placeholder="Post title">
                                 </div>
                                 <div class="form-group">
-                                    <button type="button" class="btn btn-primary">Create Post</button>
+                                    <button type="submit" class="btn btn-primary">Create Post</button>
                                 </div>
                             </form>
                         </div>

@@ -25,6 +25,7 @@
                 color: #0178ff;
             }
 
+
             .full-height {
                 height: 100vh;
             }
@@ -70,28 +71,33 @@
     </head>
     <body>
         <div class="flex-center position-ref full-height">
-            @if (Route::has('login'))
-                <div class="top-right links">
-                    @auth
-                        <a href="{{ url('/home') }}">Home</a>
-                    @else
-                        <a href="{{ route('login') }}">Login</a>
-
-                        @if (Route::has('register'))
-                            <a href="{{ route('register') }}">Register</a>
-                        @endif
-                    @endauth
-                </div>
-            @endif
-
             <div class="content">
-                <div class="title m-b-md">
-                    Hello, World!
+                <div class="container">
+                    <div class="row pb-3">
+                        <div class="col-lg-12 justify-content-center">
+                            <h1>
+                                Posts
+                            </h1>
+                            <p>
+                                <a href="/posts/new">Create post</a>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="row pb-3">
+                        <div class="col-lg-12 justify-content-center">
+                            <pre>
+                                {{ $posts }}
+                            </pre>
+                        </div>
+                    </div>
                 </div>
+
                 <div class="links">
                     <a href="/queues">Queue tutorial</a>
                     <a href="/hello">Hello</a>
                     <a href="/posts/new">Database Tutorial</a>
+                    <a href="https://docs.amezmo.com">Amezmo Docs</a>
                 </div>
             </div>
         </div>
