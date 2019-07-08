@@ -46,7 +46,8 @@ Route::get('/posts/new', function() {
 
 Route::post('/posts', function() {
     Post::create([
-        'title' => request('title')
+        'title' => request('title'),
+        'body' => request('body')
     ]);
 
     return redirect('/posts');
