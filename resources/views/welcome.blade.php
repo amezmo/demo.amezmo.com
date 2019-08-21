@@ -70,31 +70,18 @@
     </head>
     <body>
         <div class="flex-center position-ref full-height">
-            @if (Route::has('login'))
-                <div class="top-right links">
-                    @auth
-                        <a href="{{ url('/home') }}">Home</a>
-                    @else
-                        <a href="{{ route('login') }}">Login</a>
-
-                        @if (Route::has('register'))
-                            <a href="{{ route('register') }}">Register</a>
-                        @endif
-                    @endauth
-                </div>
-            @endif
+            @include('header')
 
             <div class="content">
                 <div class="title m-b-md">
                     Sample Laravel Application
                 </div>
+                <p>
+                    This is an <a href="https://www.amezmo.co">Amezmo</a> demo PHP application using Laravel.
+                    Check out the source code on <a href="https://github.com/amezmo/demo.amezmo.com">GitHub</a>
+                </p>
 
-                <div class="links">
-                    <a href="/queues">Queue tutorial</a>
-                    <a href="/hello">Hello</a>
-                    <a href="/posts/new">Database Tutorial</a>
-                    <a href="https://docs.amezmo.com">Amezmo Docs</a>
-                </div>
+                @include('footer')
             </div>
         </div>
     </body>

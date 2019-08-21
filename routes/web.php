@@ -21,6 +21,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/server-info', function () {
+    phpinfo();
+});
+
 Route::get('/hello', function () {
     Log::info('Testing');
     return view('hello');

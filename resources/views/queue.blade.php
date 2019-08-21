@@ -71,6 +71,8 @@
     </head>
     <body>
         <div class="flex-center position-ref full-height">
+            @include('header')
+
             <div class="content">
                 <h1>
                     Queue tutorial
@@ -100,14 +102,7 @@
                     </div>
                 </div>
 
-                <div class="links">
-                    <div class="links">
-                        <a href="/queues">Queue tutorial</a>
-                        <a href="/hello">Hello</a>
-                        <a href="/posts/new">Database Tutorial</a>
-                        <a href="https://docs.amezmo.com">Amezmo Docs</a>
-                    </div>
-                </div>
+                @include('footer')
             </div>
         </div>
     </body>
