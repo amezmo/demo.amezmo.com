@@ -10,6 +10,8 @@ use Illuminate\Foundation\Bus\Dispatchable;
 
 use Illuminate\Support\Facades\Log;
 
+use App\Post;
+
 class TestJob implements ShouldQueue
 {
     use Dispatchable, InteractsWithQueue, Queueable, SerializesModels;
@@ -31,6 +33,10 @@ class TestJob implements ShouldQueue
      */
     public function handle()
     {
+
+        $posts = Post::all();
+
+        var_dump($posts);
         //
         Log::info('Hello World, this log entry happened from TestJob');
     }
