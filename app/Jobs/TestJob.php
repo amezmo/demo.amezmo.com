@@ -34,9 +34,9 @@ class TestJob implements ShouldQueue
     public function handle()
     {
 
-        $posts = Post::all();
-
-        var_dump($posts);
+        foreach (Post::all() as $post) {
+            echo $post->title . "\n";
+        }
         //
         Log::info('Hello World, this log entry happened from TestJob');
     }
