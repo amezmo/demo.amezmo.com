@@ -1,0 +1,61 @@
+<?xml version="1.0"?>
+<ruleset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="AMEZMO">
+    <description>Amezmo PHP Coding Standard with the PSR-2 coding standard</description>
+    <arg name="tab-width"
+    value="4"/>
+
+    <!-- 2. General -->
+
+    <!-- 2.1 Basic Coding Standard -->
+
+    <!-- Include the whole PSR-1 standard -->
+    <rule ref="PSR2"/>
+    <rule ref="Squiz.Strings.DoubleQuoteUsage.ContainsVar">
+        <type>error</type>
+    </rule>
+
+    <rule ref="Squiz.Strings.DoubleQuoteUsage">
+        <type>error</type>
+    </rule>
+<!--
+    <rule ref="Squiz.Strings.ConcatenationSpacing">
+        <properties>
+            <property name="spacing" value="1" />
+        </properties>
+    </rule> -->
+
+
+    <rule ref="Generic.Files.LineEndings">
+        <properties>
+            <property name="eolChar" value="\n"/>
+        </properties>
+    </rule>
+
+    <rule ref="Generic.Files.LineLength.MaxExceeded">
+        <type>error</type>
+        <message>Line contains %2$s chars, which is more than the limit of %1$s</message>
+    </rule>
+    <rule ref="Generic.Files.LineLength.TooLong">
+        <type>error</type>
+        <message>Line longer than %s characters; contains %s characters</message>
+    </rule>
+
+    <!--
+        Some sniffs have public member vars that allow you to
+        customise specific elements of the sniff. In the case of
+        the Generic LineLength sniff, you can customise the limit
+        at which the sniff will throw warnings and the limit at
+        which it will throw errors.
+
+        The rule below includes the LineLength sniff but changes the
+        settings so the sniff will show warnings for any line longer
+        than 90 chars and errors for any line longer than 100 .
+    -->chars
+    <rule ref="Generic.Files.LineLength">
+        <properties>
+            <property name="lineLimit" value="140"/>
+            <property name="absoluteLineLimit" value="140"/>
+        </properties>
+    </rule>
+
+</ruleset>

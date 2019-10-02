@@ -17,7 +17,7 @@ use App\Post;
 */
 
 Route::get('/', function () {
-    Log::info('Hello World, this is your log entry');
+    Log::info('Hit index. Does it break????');
     return view('welcome');
 });
 
@@ -40,15 +40,17 @@ Route::get('test-queues', function () {
 });
 
 
-Route::get('/posts', function() {
-    return view('posts.list', ['posts' => json_encode(Post::all(), JSON_PRETTY_PRINT)]);
+Route::get('/posts', function () {
+    return view('posts.list', [
+        'posts' => json_encode(Post::all(), JSON_PRETTY_PRINT)
+    ]);
 });
 
-Route::get('/posts/new', function() {
+Route::get('/posts/new', function () {
     return view('posts.create');
 });
 
-Route::post('/posts', function() {
+Route::post('/posts', function () {
     Post::create([
         'title' => request('title'),
         'body' => request('body')
