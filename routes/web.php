@@ -17,7 +17,9 @@ use App\Post;
 */
 
 Route::get('/', function () {
-    Log::info('Hit index. Does it break????');
+    Log::info('Before sleep???');
+    sleep(15);
+    Log::info('After sleep. Does it break????');
     return view('welcome');
 });
 
