@@ -23,15 +23,6 @@ Route::get('/', function () {
 });
 
 Route::get('/path', function () {
-    
-    $fp = fopen(storage_path('logs/hello-world-test.log'), "w");
-
-    fwrite($fp, "Hello World: " . __DIR__);
-    fwrite($fp, "I Will sleep now");
-    sleep(30);
-    fwrite($fp, "Hello World: " . __DIR__);
-    fclose($fp);
-
     return response()->json([
         'storage_path' => storage_path(),
         'other' => storage_path('logs/laravel.log')
