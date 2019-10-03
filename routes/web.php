@@ -22,6 +22,11 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/path', function () {
+    echo storage_path();
+    echo storage_path('logs/laravel.log');
+});
+
 Route::get('/server-info', function () {
     phpinfo();
 });
