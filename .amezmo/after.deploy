@@ -1,4 +1,6 @@
 #!/bin/bash
 
+env;
+
 echo "Hook: after.deploy";
 
