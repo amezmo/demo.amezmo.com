@@ -1,6 +1,11 @@
 #!/usr/bin/env nodejs
 
+
 const WebSocketServer = require('socket.io');
+const dotenv = require('dotenv');
+dotenv.config();
+
+// the hook needs to copy the configuration
 const io = new WebSocketServer({
     origins: process.env.APP_URL + ':443',
 });
