@@ -1,6 +1,7 @@
 #!/bin/bash
 
-echo "Running composer install";
+
+echo "Running composer install from ${APPLICATION_ROOT}";
 
 composer \
     --no-ansi \
@@ -12,3 +13,8 @@ composer \
     install
 
 php artisan migrate --no-interaction --no-ansi --force;
+
+
+echo "Running NPM install";
+cd $APPLICATION_ROOT/realtime;
+npm install;
