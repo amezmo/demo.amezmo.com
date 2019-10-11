@@ -13,3 +13,4 @@ yarn-error.log
 /storage/framework/*.php
 storage/framework/views/*.php
 .env
+realtime/node_modules/**/*

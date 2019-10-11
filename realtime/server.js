@@ -8,10 +8,11 @@ const io = new WebSocketServer({
 io.listen(5000);
 
 io.httpServer.on('listening', function() {
-    logger.info('Amezmo WebSocket server is listening on %o', io.httpServer.address());
+    console.log('Amezmo WebSocket server is listening on %o', io.httpServer.address());
 });
 
 io.sockets.on('connection', function (socket) {
+    console.log('new connection %s', socket.id);
 
     socket.on('disconnect', function(reason) {
         console.log('%s: event disconnect: %s', socket.id, reason);
@@ -21,8 +22,6 @@ io.sockets.on('connection', function (socket) {
         socket.disconnect();
     });
 
-    logger.notice('new connection %s', socket.id);
-    
     socket.on('ping', function() {
         socket.emit('ping', 'Hello World');
         console.log('%s: client requested getevents', socket.id);
