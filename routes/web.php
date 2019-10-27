@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Log;
-use Illuminate\Support\Facades\Request;
+use Illuminate\Http\Request;
 
 use App\Jobs\TestJob;
 use App\Post;
