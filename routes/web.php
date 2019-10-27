@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Log;
+use Illuminate\Support\Facades\Request;
 
 use App\Jobs\TestJob;
 use App\Post;
@@ -15,6 +16,15 @@ use App\Post;
 | contains the "web" middleware group. Now create something great!
 |
 */
+
+Route::get('/upload', function () {
+    return view('upload-form');
+});
+
+Route::post('/upload', function (Request $request) {
+    $path = $request->file('file')->store('avatars');
+    return response($path);
+});
 
 Route::get('/', function () {
     Log::info('Before sleep???');
