@@ -2,9 +2,9 @@
 
 @section('content')
 
-<form action="/upload" method="post">
+<form action="/upload" enctype="multipart/form-data"  method="post">
     @csrf
-    <input name="file" type="file" />
+    <input type="file" name="file"/>
     <button type="submit">Submit</button>
 </form>
 @endsection
