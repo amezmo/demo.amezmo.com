@@ -17,8 +17,7 @@ php artisan migrate --no-interaction --no-ansi --force;
 
 
 echo "Running NPM install";
-cd $APPLICATION_ROOT/realtime;
-npm install;
+(cd $APPLICATION_ROOT/realtime && npm install);
 
 
 echo "PATH:"
