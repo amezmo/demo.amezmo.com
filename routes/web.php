@@ -22,8 +22,9 @@ Route::get('/upload', function () {
 });
 
 Route::post('/upload', function (Request $request) {
-    $path = $request->file('file')->store('avatars');
-    return response($path);
+    $file = $request->file('file');
+    $file->store('avatars');
+    return asset('storage/'.$file->hashName());
 });
 
 Route::get('/', function () {
