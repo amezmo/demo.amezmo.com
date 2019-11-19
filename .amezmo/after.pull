@@ -24,4 +24,6 @@ npm install;
 echo "PATH:"
 echo "$PATH";
 
+php artisan storage:link;
+
 php --version;
