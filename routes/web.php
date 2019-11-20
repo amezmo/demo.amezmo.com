@@ -23,10 +23,11 @@ Route::get('/upload', function () {
 
 Route::post('/upload', function (Request $request) {
     $file = $request->file('file');
-    $file->store('public');
+    $file->store('uploads');
     
     echo "path: " . $file->getPathname();
-    
+
+
     return '<a href="'.asset('storage/'.$file->hashName()).'">'.asset('storage/'.$file->hashName()).'</a>';
 });
 
