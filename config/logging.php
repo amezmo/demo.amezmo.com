@@ -48,6 +48,7 @@ return [
 
         'daily' => [
             'driver' => 'daily',
+            //'permission' => '0664',
             'path' => '/webroot/logs/laravel.log',
             'level' => 'debug',
             'days' => 14,
