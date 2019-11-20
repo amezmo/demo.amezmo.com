@@ -6,7 +6,3 @@ echo "Hook: after.deploy";
 
 # https://github.com/laravel/framework/blob/master/src/Illuminate/Foundation/Console/StorageLinkCommand.php
 
-# Left: target, right: link
-if [ ! -d "/webroot/current/public/storage" ]; then
-    ln -sT /webroot/current/storage/app/public /webroot/current/public/storage;
-fi
