@@ -9,4 +9,6 @@ php artisan storage:link;
 # https://github.com/laravel/framework/blob/master/src/Illuminate/Foundation/Console/StorageLinkCommand.php
 
 # Left: target, right: link
-ln -sT /webroot/current/storage/app/public /webroot/current/public/storage;
+if [ ! -d "/webroot/current/storage/app/public" ]; then
+    ln -sT /webroot/current/storage/app/public /webroot/current/public/storage;
+fi
