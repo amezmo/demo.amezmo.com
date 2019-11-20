@@ -3,3 +3,5 @@
 env;
 
 echo "Hook: after.deploy";
+
+php artisan storage:link;
