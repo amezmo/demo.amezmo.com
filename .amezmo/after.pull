@@ -36,4 +36,4 @@ if [ ! -d "/webroot/storage/app/public" ]; then
     mkdir -m 0770 /webroot/storage/app/public;
 fi
 
-php artisan storage:link;
+ln -sT /webroot/storage/app/public $APPLICATION_ROOT/public/storage;
