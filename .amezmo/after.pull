@@ -26,3 +26,12 @@ echo "$PATH";
 # https://github.com/laravel/framework/blob/master/src/Illuminate/Foundation/Console/StorageLinkCommand.php
 
 php --version;
+
+
+if [ ! -d "/webroot/storage/app" ]; then
+    mkdir -m 0770 /webroot/storage/app;
+fi
+
+if [ ! -d "/webroot/storage/public" ]; then
+    mkdir -m 0770; /webroot/storage/public;
+fi
