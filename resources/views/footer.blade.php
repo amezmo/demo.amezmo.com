@@ -7,5 +7,6 @@
     <a href="https://docs.amezmo.com">Amezmo Docs</a>
 </div>
 <div>
-    Storage path: {{ storage_path() }}
+    <div>Storage path: {{ storage_path() }}</div>
+    <div>Public path: {{ storage_path('app/public') }}</div>
 </div>
