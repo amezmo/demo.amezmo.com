@@ -13,8 +13,7 @@ return [
     |
     */
 
-    'default' => env('FILESYSTEM_DRIVER', 'local'),
-
+    'default' => env('FILESYSTEM_DRIVER', 'public'),
     /*
     |--------------------------------------------------------------------------
     | Default Cloud Filesystem Disk
@@ -50,7 +49,7 @@ return [
 
         'public' => [
             'driver' => 'local',
-            'root' => public_path('storage'),
+            'root' => storage_path('app/public'),
             'url' => env('APP_URL').'/storage',
             'visibility' => 'public',
         ],
