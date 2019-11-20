@@ -23,6 +23,8 @@ echo "Running NPM install";
 echo "PATH:"
 echo "$PATH";
 
+# https://github.com/laravel/framework/blob/master/src/Illuminate/Foundation/Console/StorageLinkCommand.php
+
 php artisan storage:link;
 
 php --version;
