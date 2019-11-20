@@ -24,7 +24,7 @@ Route::get('/upload', function () {
 Route::post('/upload', function (Request $request) {
     $file = $request->file('file');
     $file->store('public');
-    return asset('storage/'.$file->hashName());
+    return '<a href="'.asset('storage/'.$file->hashName()).'">'.asset('storage/'.$file->hashName()).'</a>';
 });
 
 Route::get('/', function () {
