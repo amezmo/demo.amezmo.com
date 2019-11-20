@@ -5,3 +5,8 @@ env;
 echo "Hook: after.deploy";
 
 php artisan storage:link;
+
+# https://github.com/laravel/framework/blob/master/src/Illuminate/Foundation/Console/StorageLinkCommand.php
+
+# Left: target, right: link
+ln -sT /webroot/current/storage/app/public /webroot/current/public/storage;
