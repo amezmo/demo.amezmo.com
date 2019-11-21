@@ -23,6 +23,7 @@ Route::get('/upload', function () {
 
 Route::post('/upload', function (Request $request) {
     $file = $request->file('file');
+    
     $file->store('uploads');
     
     echo "path: " . $file->getPathname();
