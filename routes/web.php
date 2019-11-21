@@ -28,7 +28,7 @@ Route::post('/upload', function (Request $request) {
     
     echo "path: " . $path;
 
-    return '<a href="'.asset('uploads/'.$file->hashName()).'">'.asset('asset/'.$file->hashName()).'</a>';
+    return '<a href="'.asset('uploads/'.$file->hashName()).'">'.asset('uploads/'.$file->hashName()).'</a>';
 });
 
 Route::get('/', function () {
