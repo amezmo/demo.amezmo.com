@@ -29,7 +29,7 @@ Route::post('/upload', function (Request $request) {
     echo "Path: " . $path;
     echo "<br />";
 
-    echo '<a href="'.asset('img/'.$file->hashName()).'">'.asset('img/'.$file->hashName()).'</a>';
+    echo '<a href="'.asset('storage/img/'.$file->hashName()).'">'.asset('storage/img/'.$file->hashName()).'</a>';
 });
 
 Route::get('/', function () {
