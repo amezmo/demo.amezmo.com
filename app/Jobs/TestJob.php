@@ -39,5 +39,7 @@ class TestJob implements ShouldQueue
         }
         //
         Log::info('Hello World, this log entry happened from TestJob');
+
+        file_put_contents('/webroot/storage/text.txt', time());
     }
 }
