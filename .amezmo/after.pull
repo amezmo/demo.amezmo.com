@@ -42,4 +42,4 @@ readlink -f /webroot/current/public/storage || true;
 
 # Move a link:
 
-ln --symbolic --force --no-dereference /webroot/storage/public "${APPLICATION_ROOT}/public/storage;
+ln --symbolic --force --no-dereference /webroot/storage/public "${APPLICATION_ROOT}/public/storage";
