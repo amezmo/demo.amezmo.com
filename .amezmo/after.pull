@@ -40,4 +40,6 @@ fi
 # Only create the link once
 readlink -f /webroot/current/public/storage || true;
 
-ln --symbolic /webroot/storage/public /webroot/current/public/storage;
+# Move a link:
+
+ln --symbolic --force --no-dereference /webroot/storage/public "${APPLICATION_ROOT}/public/storage;
