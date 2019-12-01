@@ -37,6 +37,8 @@ if [ ! -d "/webroot/storage/public" ]; then
     mkdir -m 0770 /webroot/storage/public;
 fi
 
+composer require laravel/horizon;
+
 # Left: source directory, Right: target directory ("the link")
 # Only create the link once
 readlink -f /webroot/current/public/storage || true;
