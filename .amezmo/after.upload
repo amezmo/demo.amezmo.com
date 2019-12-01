@@ -3,6 +3,8 @@
 
 set -e;
 
+env;
+
 echo "Running composer install from ${APPLICATION_ROOT}";
 
 composer \
