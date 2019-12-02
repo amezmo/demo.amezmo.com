@@ -37,7 +37,18 @@ if [ ! -d "/webroot/storage/public" ]; then
     mkdir -m 0770 /webroot/storage/public;
 fi
 
+
+
+php artisan make:auth;
+
 composer require laravel/horizon;
+
+php artisan horizon:install
+
+php artisan queue:failed-table
+
+php artisan migrate
+
 
 # Left: source directory, Right: target directory ("the link")
 # Only create the link once
