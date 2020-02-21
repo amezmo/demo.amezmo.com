@@ -19,7 +19,7 @@ cat $APPLICATION_ROOT/.env;
 php artisan migrate --no-interaction --no-ansi --force;
 
 echo "Running NPM install";
-npm --no-progress install;
+npm --no-progress --no-dev install;
 
 
 # if [ ! -d "/webroot/storage/app" ]; then
