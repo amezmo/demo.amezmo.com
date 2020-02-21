@@ -43,12 +43,23 @@ fi
 
 php artisan make:auth;
 
+<<<<<<< HEAD
 #composer require laravel/horizon;
 
 #php artisan horizon:install
 
 #php artisan queue:failed-table
 
+
+=======
+composer require laravel/horizon;
+>>>>>>> horizon
+
+php artisan horizon:install
+
+php artisan queue:failed-table
+
+php artisan migrate
 
 
 # Left: source directory, Right: target directory ("the link")
