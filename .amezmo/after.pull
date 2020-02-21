@@ -19,9 +19,7 @@ cat $APPLICATION_ROOT/.env;
 php artisan migrate --no-interaction --no-ansi --force;
 
 echo "Running NPM install";
-(cd $APPLICATION_ROOT/realtime && npm install);
-
-php --version;
+npm --no-progress install;
 
 
 # if [ ! -d "/webroot/storage/app" ]; then
