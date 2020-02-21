@@ -20,7 +20,7 @@ php artisan migrate --no-interaction --no-ansi --force;
 
 echo "Running NPM install";
 # Note: The following NPM command has been tested to be portable across machines
-NODE_ENV=production npm --no-audit --no-bin-links --no-optional --package-lock-only --only=prod --no-progress install;
+NODE_ENV=production npm --no-audit --no-bin-links --no-optional --only=prod --no-progress install;
 
 
 # if [ ! -d "/webroot/storage/app" ]; then
