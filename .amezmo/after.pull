@@ -44,6 +44,7 @@ fi
 php artisan make:auth;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 #composer require laravel/horizon;
 
 #php artisan horizon:install
@@ -54,10 +55,13 @@ php artisan make:auth;
 =======
 composer require laravel/horizon;
 >>>>>>> horizon
+=======
+#composer require laravel/horizon;
+>>>>>>> fix
 
-php artisan horizon:install
+#php artisan horizon:install
 
-php artisan queue:failed-table
+#php artisan queue:failed-table
 
 php artisan migrate
 
