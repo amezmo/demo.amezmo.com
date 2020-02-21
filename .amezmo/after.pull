@@ -18,15 +18,8 @@ cat $APPLICATION_ROOT/.env;
 
 php artisan migrate --no-interaction --no-ansi --force;
 
-
 echo "Running NPM install";
 (cd $APPLICATION_ROOT/realtime && npm install);
-
-
-echo "PATH:"
-echo "$PATH";
-
-# https://github.com/laravel/framework/blob/master/src/Illuminate/Foundation/Console/StorageLinkCommand.php
 
 php --version;
 
@@ -39,23 +32,7 @@ if [ ! -d "/webroot/storage/public" ]; then
     mkdir -m 0770 /webroot/storage/public;
 fi
 
-
-
-php artisan make:auth;
-
 #composer require laravel/horizon;
-
 #php artisan horizon:install
-
 #php artisan queue:failed-table
 
-
-
-# Left: source directory, Right: target directory ("the link")
-# Only create the link once
-readlink -f /webroot/current/public/storage || true;
-
-# Move a link:
-# To remove files, one needs write permission on the directory where the file exists
-
-ln --symbolic --force --no-dereference /webroot/storage/public "${APPLICATION_ROOT}/public/storage";
