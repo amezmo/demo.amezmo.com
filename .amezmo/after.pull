@@ -14,7 +14,8 @@ composer \
     --profile \
     install
 
-cat $APPLICATION_ROOT/.env;
+php artisan config:cache;
+php artisan route:cache;
 
 php artisan migrate --no-interaction --no-ansi --force;
 
@@ -22,10 +23,6 @@ echo "Running NPM install";
 # Note: The following NPM command has been tested to be portable across machines
 NODE_ENV=production npm --no-audit --no-bin-links --no-optional --only=prod --no-progress install;
 
-
-# if [ ! -d "/webroot/storage/app" ]; then
-#     mkdir -m 0770 /webroot/storage/app;
-# fi
 
 if [ ! -d "/webroot/storage/public" ]; then
     mkdir -m 0770 /webroot/storage/public;
