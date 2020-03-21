@@ -7,6 +7,6 @@ env;
 echo "Hook: after.deploy";
 
 
-#exit 1;
+exit 1;
 # https://github.com/laravel/framework/blob/master/src/Illuminate/Foundation/Console/StorageLinkCommand.php
 
