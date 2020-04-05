@@ -58,6 +58,17 @@ return [
             'prefix_indexes' => true,
             'strict' => true,
             'engine' => null,
+            // NOTE:
+            // To use MySQL over SSL, uncomment lines 63-68. 
+            //
+            // Step 1:
+            //     Uncomment lines 63-68. 
+            // Step 2:
+            //     Download your SSL files. See https://www.amezmo.com/docs/databases/ssl-connections#SSLCertFiles
+            //
+            // Step 3:
+            //     Create .env entries for the below variables. For each entry, the value must be a file path.
+            //
             // 'options' => [
             //     PDO::MYSQL_ATTR_SSL_CA      => env('MYSQL_ATTR_SSL_CA'),
             //     PDO::MYSQL_ATTR_SSL_CERT    => env('MYSQL_ATTR_SSL_CERT'),
