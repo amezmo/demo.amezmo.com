@@ -36,6 +36,8 @@ Route::post('/upload', function (Request $request) {
 Route::get('/mysql', function () {
     $pdo = DB::connection()->getPdo();
     dump($pdo);
+
+    echo '<h4>If you see <code>Ssl_cipher</code> in the below output, SSL is working</h4>';
     dump($pdo->query("SHOW STATUS LIKE 'Ssl_cipher'")->fetch(PDO::FETCH_ASSOC));
 });
 
