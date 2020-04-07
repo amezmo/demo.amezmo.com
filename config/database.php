@@ -59,22 +59,22 @@ return [
             'strict' => true,
             'engine' => null,
             // NOTE:
-            // To use MySQL over SSL, uncomment lines 63-68. 
+            // To use MySQL over SSL, uncomment lines 72-77.
             //
             // Step 1:
-            //     Uncomment lines 63-68. 
+            //     Uncomment lines 72-77.
             // Step 2:
             //     Download your SSL files. See https://www.amezmo.com/docs/databases/ssl-connections#SSLCertFiles
             //
             // Step 3:
             //     Create .env entries for the below variables. For each entry, the value must be a file path.
             //
-            // 'options' => [
-            //     PDO::MYSQL_ATTR_SSL_CA      => env('MYSQL_ATTR_SSL_CA'),
-            //     PDO::MYSQL_ATTR_SSL_CERT    => env('MYSQL_ATTR_SSL_CERT'),
-            //     PDO::MYSQL_ATTR_SSL_KEY     => env('MYSQL_ATTR_SSL_KEY'),
-            //     PDO::MYSQL_ATTR_SSL_VERIFY_SERVER_CERT => false
-            // ]
+            'options' => [
+                PDO::MYSQL_ATTR_SSL_CA                   => '/webroot/current/certs/ca.pem',
+                PDO::MYSQL_ATTR_SSL_CERT                 => '/webroot/current/certs/client-cert.pem',
+                PDO::MYSQL_ATTR_SSL_KEY                  => '/webroot/current/certs/client-key.pem',
+                PDO::MYSQL_ATTR_SSL_VERIFY_SERVER_CERT   => false
+            ],
         ],
 
         'pgsql' => [
