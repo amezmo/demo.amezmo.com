@@ -35,7 +35,10 @@ Route::post('/upload', function (Request $request) {
 
 Route::get('/mysql', function () {
     $pdo = DB::connection()->getPdo();
-    dd($pdo);
+    $status = $pdo->getAttribute(PDO::ATTR_CONNECTION_STATUS);
+
+    dump($pdo);
+    dump($status);
 });
 
 Route::get('/', function () {
