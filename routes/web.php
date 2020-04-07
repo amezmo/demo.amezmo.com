@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Log;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 
 use App\Jobs\TestJob;
@@ -30,6 +31,11 @@ Route::post('/upload', function (Request $request) {
     echo "<br />";
 
     echo '<a href="'.asset('storage/img/'.$file->hashName()).'">'.asset('storage/img/'.$file->hashName()).'</a>';
+});
+
+Route::get('/mysql', function () {
+    $pdo = DB::connection()->getPdo();
+    dd($pdo);
 });
 
 Route::get('/', function () {
