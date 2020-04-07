@@ -36,7 +36,7 @@ Route::post('/upload', function (Request $request) {
 Route::get('/mysql', function () {
     $pdo = DB::connection()->getPdo();
     dump($pdo);
-    dump($pdo->query("SHOW STATUS LIKE 'Ssl_cipher'")->fetch());
+    dump($pdo->query("SHOW STATUS LIKE 'Ssl_cipher'")->fetch(PDO::FETCH_ASSOC));
 });
 
 Route::get('/', function () {
