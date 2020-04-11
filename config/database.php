@@ -68,12 +68,12 @@ return [
             // Step 3:
             //     Create .env entries for the below variables. For each entry, the value must be a file path.
             //
-            'options' => [
-                PDO::MYSQL_ATTR_SSL_CA                   => '/webroot/certs/ca.pem',
-                PDO::MYSQL_ATTR_SSL_CERT                 => '/webroot/certs/client-cert.pem',
-                PDO::MYSQL_ATTR_SSL_KEY                  => '/webroot/certs/client-key.pem',
-                PDO::MYSQL_ATTR_SSL_VERIFY_SERVER_CERT   => false
-            ],
+            // 'options' => [
+            //    PDO::MYSQL_ATTR_SSL_CA                   => '/webroot/certs/ca.pem',
+            //    PDO::MYSQL_ATTR_SSL_CERT                 => '/webroot/certs/client-cert.pem',
+            //    PDO::MYSQL_ATTR_SSL_KEY                  => '/webroot/certs/client-key.pem',
+            //    PDO::MYSQL_ATTR_SSL_VERIFY_SERVER_CERT   => false
+            // ]
         ],
 
         'pgsql' => [
