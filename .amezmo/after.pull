@@ -29,7 +29,7 @@ if [ -f "package.json" ]; then
 fi
 
 if [ ! -d "/webroot/storage/public" ]; then
-    mkdir -m 0770 /webroot/storage/public;
+    mkdir /webroot/storage/public;
 fi
 
 ln \

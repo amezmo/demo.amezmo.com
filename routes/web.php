@@ -26,7 +26,7 @@ Route::get('/upload', function () {
 Route::post('/upload', function (Request $request) {
     $file = $request->file('file');
     
-    $path = $file->store('img');
+    $path = $file->storePublicly('img');
         
     echo "Path: " . $path;
     echo "<br />";
