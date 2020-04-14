@@ -24,12 +24,10 @@ Route::get('/upload', function () {
 });
 
 Route::post('/upload', function (Request $request) {
-    $file = $request->file('file');
-    
-    $path = $file->storePublicly('img');
-        
-    echo "Path: " . $path;
-    echo "<br />";
+    $file = $request->file('file')->store('img');
+            
+    echo "Path: " . $file;
+    dd($file);
 
     echo '<a href="'.asset('storage/img/'.$file->hashName()).'">'.asset('storage/img/'.$file->hashName()).'</a>';
 });
