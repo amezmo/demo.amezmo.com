@@ -24,7 +24,9 @@ Route::get('/upload', function () {
 });
 
 Route::post('/upload', function (Request $request) {
-    $file = $request->file('file')->store('img');
+    // Set the disk, even though we've already specified the default one to public
+    // in config/filesystems.php
+    $file = $request->file('file')->store('img', 'public');
             
     echo "Path: " . $file;
     dd($file);

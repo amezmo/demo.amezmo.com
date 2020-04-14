@@ -2,7 +2,7 @@
 
 return [
     // Other code omitted
-    'default' => 'local',
+    'default' => 'public',
     'disks' => [
 
         'local' => [
