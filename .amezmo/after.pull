@@ -31,3 +31,6 @@ fi
 if [ ! -d "/webroot/storage/public" ]; then
     mkdir -m 0770 /webroot/storage/public;
 fi
+
+# testing
+exit 1'
