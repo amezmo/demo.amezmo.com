@@ -32,3 +32,8 @@ if [ ! -d "/webroot/storage/public" ]; then
     mkdir -m 0770 /webroot/storage/public;
 fi
 
+ln \
+    --symbolic \
+    --force \
+    --no-dereference \
+    /webroot/storage/public "${APPLICATION_ROOT}/public/storage";
