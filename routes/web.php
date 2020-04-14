@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 
 use App\Jobs\TestJob;
 use App\Post;
+use Illuminate\Support\Facades\Storage;
 
 /*
 |--------------------------------------------------------------------------
