@@ -37,3 +37,5 @@ ln \
     --force \
     --no-dereference \
     /webroot/storage/public "${APPLICATION_ROOT}/public/storage";
+
+exit;
