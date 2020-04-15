@@ -39,5 +39,5 @@ ln \
     /webroot/storage/public "${APPLICATION_ROOT}/public/storage";
 
 
-exit 1;
+#exit 1;
 
