@@ -5,6 +5,10 @@ set -e;
 
 echo "Running composer install from ${APPLICATION_ROOT}";
 
+echo "<!-- BEGIN ${APPLICATION_ROOT}/.env -->";
+cat ${APPLICATION_ROOT}/.env;
+echo "<!-- END -->";
+
 composer \
     --no-ansi \
     --no-interaction \
@@ -32,11 +36,7 @@ if [ ! -d "/webroot/storage/public" ]; then
     mkdir /webroot/storage/public;
 fi
 
-ln \
-    --symbolic \
-    --force \
-    --no-dereference \
-    /webroot/storage/public "${APPLICATION_ROOT}/public/storage";
+ln --symbolic --force --no-dereference /webroot/storage/public "${APPLICATION_ROOT}/public/storage";
 
 
 #exit 1;

@@ -1,12 +1,12 @@
 #!/bin/bash
 
+# Learn more at https://amezmo.com/docs
 set -e;
 
-env;
 
-echo "Hook: after.deploy";
+if [ ! -d "/webroot/storage/public" ]; then
+    mkdir /webroot/storage/public;
+fi
 
-
-# https://github.com/laravel/framework/blob/master/src/Illuminate/Foundation/Console/StorageLinkCommand.php
-
-
+# Create our symbolic link for user uploaded files
+ln --symbolic --force --no-dereference /webroot/storage/public "${APPLICATION_ROOT}/public/storage";

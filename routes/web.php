@@ -6,7 +6,6 @@ use Illuminate\Http\Request;
 
 use App\Jobs\TestJob;
 use App\Post;
-use Illuminate\Support\Facades\Storage;
 
 /*
 |--------------------------------------------------------------------------
@@ -31,6 +30,24 @@ Route::post('/upload', function (Request $request) {
             
     echo '<a href="'.asset('storage/img/'.$file->hashName()).'">'.asset('storage/img/'.$file->hashName()).'</a>';
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 Route::get('/mysql', function () {
     $pdo = DB::connection()->getPdo();

@@ -4,7 +4,6 @@ return [
     // Other code omitted
     'default' => 'public',
     'disks' => [
-
         'local' => [
             'driver' => 'local',
             'root' => '/webroot/storage',
