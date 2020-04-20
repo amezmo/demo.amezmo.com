@@ -39,5 +39,5 @@ fi
 ln --symbolic --force --no-dereference /webroot/storage/public "${APPLICATION_ROOT}/public/storage";
 
 
-exit 0;
+exit 1;
 
