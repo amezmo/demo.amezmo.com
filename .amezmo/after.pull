@@ -8,6 +8,7 @@ echo "Running composer install from ${APPLICATION_ROOT}";
 echo "<!-- BEGIN ${APPLICATION_ROOT}/.env -->";
 cat ${APPLICATION_ROOT}/.env;
 echo "<!-- END -->";
+#!/bin/bash
 
 composer \
     --no-ansi \
