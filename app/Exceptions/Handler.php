@@ -36,17 +36,19 @@ class Handler extends ExceptionHandler
     {
         if ($exception instanceof \ErrorException) {
             $message = $exception->getMessage();
-
-            echo $message;
-            exit;
-            
             if (strpos($message, 'file_put_contents(') === 0) {
                 $file = substr($message, strlen('file_put_contents('));
                 $file =  substr($file, 0, strpos($file, ')')) . PHP_EOL;
-                
+                    
+                echo 'stat $file';
+                exit;
+
                 clearstatcache();
                 `stat $file`;
+
                 exit;
+            } else {
+                echo "Could not match";
             }
 
             dd($exception);
