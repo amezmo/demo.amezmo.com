@@ -40,9 +40,6 @@ class Handler extends ExceptionHandler
                 $file = substr($message, strlen('file_put_contents('));
                 $file =  substr($file, 0, strpos($file, ')'));
                     
-                echo 'stat $file';
-                exit;
-
                 echo shell_exec("stat $file");
                 exit;
             } else {
