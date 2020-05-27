@@ -1,0 +1,9 @@
+
+  File: '/webroot/release/2020-05-27T19:49:46.719126Z.f8ee619b/storage/framework/sessions/1Q0ibPPrycZ542Of98RZt5uvcqn5AHeIDTRyErFh'
+  Size: 191       	Blocks: 8          IO Block: 4096   regular file
+Device: fc00h/64512d	Inode: 408936      Links: 1
+Access: (0664/-rw-rw-r--)  Uid: (  999/deployer)   Gid: (   33/www-data)
+Access: 2020-05-27 19:51:12.247000998 +0000
+Modify: 2020-05-27 19:51:11.695000998 +0000
+Change: 2020-05-27 19:51:12.191000998 +0000
+ Birth: -
