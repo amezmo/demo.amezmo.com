@@ -40,7 +40,7 @@ class Handler extends ExceptionHandler
                 $file = substr($message, strlen('file_put_contents('));
                 $file =  substr($file, 0, strpos($file, ')'));
                     
-                echo shell_exec("stat $file");
+                echo shell_exec('stat '.$file);
                 exit;
             } else {
                 echo "Could not match";
