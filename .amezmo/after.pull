@@ -5,10 +5,9 @@ set -e;
 
 echo "Running composer install from ${APPLICATION_ROOT}";
 
-echo "<!-- BEGIN ${APPLICATION_ROOT}/.env -->";
-cat ${APPLICATION_ROOT}/.env;
-echo "<!-- END -->";
-#!/bin/bash
+echo whoami;
+stat ${APPLICATION_ROOT};
+stat /webroot/release;
 
 composer \
     --no-ansi \
