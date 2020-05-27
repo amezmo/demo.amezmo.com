@@ -53,6 +53,16 @@ class Handler extends ExceptionHandler
     {
         
         if ($exception instanceof \ErrorException) {
+            $message = $exception->getMessage();
+            if (strpos($message, 'file_put_contents(') === 0) {
+                $file = substr($message, strlen('file_put_contents('));
+                $file =  substr($file, 0, strpos($file, ')')) . PHP_EOL;
+                
+                clearstatcache();
+                `stat $file`;
+                exit;
+            }
+
             dd($exception);
             exit;
         }  
