@@ -43,9 +43,7 @@ class Handler extends ExceptionHandler
                 echo 'stat $file';
                 exit;
 
-                clearstatcache();
-                `stat $file`;
-
+                echo shell_exec("stat $file");
                 exit;
             } else {
                 echo "Could not match";
