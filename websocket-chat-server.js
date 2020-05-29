@@ -5,7 +5,9 @@ var express = require('express');
 var app = express();
 var path = require('path');
 var server = require('http').createServer(app);
-var io = require('socket.io')(server);
+var io = require('socket.io')(server, {
+  origins: 'https://demo.amezmo.com:443'
+});
 var port = process.env.PORT || 3000;
 
 server.listen(port, () => {
