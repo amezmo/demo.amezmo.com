@@ -10,8 +10,9 @@
         "production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --no-progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js"
     },
     "dependencies": {
-        "socket.io": "^2.1.1",
-        "dotenv": "^6.2.0"
+        "dotenv": "^6.2.0",
+        "express": "~4.17.1",
+        "socket.io": "~2.3.0"
     },
     "devDependencies": {
         "axios": "^0.18",
