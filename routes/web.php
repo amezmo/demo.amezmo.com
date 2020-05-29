@@ -18,6 +18,10 @@ use App\Post;
 |
 */
 
+Route::get('/chat', function() {
+    return view('websocket-chat');
+});
+
 Route::get('/upload', function () {
     return view('upload-form');
 });
@@ -25,30 +29,11 @@ Route::get('/upload', function () {
 Route::post('/upload', function (Request $request) {
     // Set the disk, even though we've already specified the default one to public
     // in config/filesystems.php
-    $file = $request->file('user_avatar');
+    $file = $request->file('file');
     $file->store('img', 'public');
-
-    return view('upload-success', [
-        'fileLink' => asset('storage/img/'.$file->hashName())
-    ]);
+            
+    echo '<a href="'.asset('storage/img/'.$file->hashName()).'">'.asset('storage/img/'.$file->hashName()).'</a>';
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 Route::get('/mysql', function () {

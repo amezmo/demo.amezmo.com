@@ -5,9 +5,7 @@
     <a href="https://github.com/amezmo/demo.amezmo.com">Source code</a>
     <a href="/posts/new">Database Tutorial</a>
     <a href="https://docs.amezmo.com">Docs</a>
-    <a href="/register">Register</a>
-    <a href="/register">Login</a>
-    <a href="/register">Horizon</a>
+    <a href="/chat">Websocket Chat</a>
 </div>
 <div>
     <div>Storage path: {{ storage_path() }}</div>
