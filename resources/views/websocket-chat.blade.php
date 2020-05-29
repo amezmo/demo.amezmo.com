@@ -200,7 +200,11 @@ ul {
   var lastTypingTime;
   var $currentInput = $usernameInput.focus();
 
-  var socket = io();
+  var socket = io.connect('wss://rt-demo.amezmo.com', {
+    transports: ['websocket'],
+    reconnection: true,
+    reconnectionAttempts: 5
+  });
 
   const addParticipantsMessage = (data) => {
     var message = '';
