@@ -156,19 +156,13 @@ ul {
 
 @section('content')
 <h2>Websocket Live Chat</h2>
+<div class="chatArea">
+  <ul class="messages"></ul>
+</div>
 
 <ul>
     <li class="chat">
-      <div class="chatArea">
-        <ul class="messages"></ul>
-      </div>
       <input class="inputMessage" placeholder="Type here..."/>
-    </li>
-    <li class="login" style="background-color: #000;">
-      <div class="form">
-        <h3 class="title">What's your nickname?</h3>
-        <input class="usernameInput" type="text" maxlength="14" />
-      </div>
     </li>
 </ul>
 
