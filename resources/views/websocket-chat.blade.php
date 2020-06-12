@@ -194,6 +194,7 @@ ul {
   var typing = false;
   var lastTypingTime;
   var $currentInput = $usernameInput.focus();
+  
   var socket = io.connect('wss://rt-demo.amezmo.com', {
     transports: ['websocket'],
     reconnection: true,
