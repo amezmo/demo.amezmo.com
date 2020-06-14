@@ -5,9 +5,8 @@ set -e;
 
 echo "Running composer install from ${APPLICATION_ROOT}";
 
-echo whoami;
-stat ${APPLICATION_ROOT};
-stat /webroot/release;
+env;
+
 
 composer \
     --no-ansi \
