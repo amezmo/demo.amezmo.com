@@ -8,7 +8,6 @@ echo "Running composer install from ${APPLICATION_ROOT}";
 env;
 
 
-exit 0;
 
 composer \
     --no-ansi \
