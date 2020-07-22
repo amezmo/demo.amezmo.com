@@ -74,8 +74,11 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Sample Laravel Application - Development
+                    Sample Laravel Application
                 </div>
+                <p>
+                    This is a sample change.
+                </p>
                 <p>
                     This is an <a href="https://www.amezmo.co">Amezmo</a> demo PHP application using Laravel.
                     Check out the source code on <a href="https://github.com/amezmo/demo.amezmo.com">GitHub</a>
