@@ -74,7 +74,7 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Sample Laravel Application
+                    Development Branch
                 </div>
                 <p>
                     This is a sample change.
