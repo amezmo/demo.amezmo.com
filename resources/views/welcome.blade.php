@@ -74,7 +74,7 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Sample Laravel Application
+                    Sample Laravel Application - Development
                 </div>
                 <p>
                     This is an <a href="https://www.amezmo.co">Amezmo</a> demo PHP application using Laravel.

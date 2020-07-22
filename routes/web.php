@@ -44,8 +44,6 @@ Route::get('/mysql', function () {
 });
 
 Route::get('/', function () {
-    Log::info('Before sleep???');
-    Log::info('After sleep. Does it break????');
     return view('welcome');
 });
 
