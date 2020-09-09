@@ -1,4 +1,10 @@
 #!/bin/bash
 
+yarn;
+yarn --version;
+
+
+cross-env env;
+
 echo "Hook: before.deploy";
 
