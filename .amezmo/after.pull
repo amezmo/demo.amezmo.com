@@ -8,6 +8,10 @@ echo "Running composer install from ${APPLICATION_ROOT}";
 env;
 
 
+id;
+
+whoami=$(whoami);
+echo "Hello, I am $whoami";
 
 composer \
     --no-ansi \
