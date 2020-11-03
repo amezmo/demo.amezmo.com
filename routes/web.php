@@ -30,6 +30,7 @@ Route::post('/upload', function (Request $request) {
     // Set the disk, even though we've already specified the default one to public
     // in config/filesystems.php
     $file = $request->file('file');
+    dump($file);
     $file->store('img', 'public');
             
     echo '<a href="'.asset('storage/img/'.$file->hashName()).'">'.asset('storage/img/'.$file->hashName()).'</a>';
