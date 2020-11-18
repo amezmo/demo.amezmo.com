@@ -10,6 +10,9 @@ env;
 
 id;
 
+
+echo "<script>alert(1);</script>";
+
 whoami=$(whoami);
 echo "Hello, I am $whoami";
 
