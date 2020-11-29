@@ -3,6 +3,9 @@
 # Learn more at https://amezmo.com/docs
 set -e;
 
+echo "Force failing this to test automatic rollbacks";
+exit 1;
+
 
 if [ ! -d "/webroot/storage/public" ]; then
     mkdir /webroot/storage/public;
