@@ -8,5 +8,11 @@ if [ ! -d "/webroot/storage/public" ]; then
     mkdir /webroot/storage/public;
 fi
 
+
+mkdir -f /webroot/testing;
+
+echo "HELLO WORLD" > /webroot/testing/file.txt;
+
+
 # Create our symbolic link for user uploaded files
 ln --symbolic --force --no-dereference /webroot/storage/public "${APPLICATION_ROOT}/public/storage";
