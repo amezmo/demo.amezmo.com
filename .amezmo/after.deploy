@@ -9,7 +9,7 @@ if [ ! -d "/webroot/storage/public" ]; then
 fi
 
 
-mkdir -f /webroot/testing;
+mkdir -p /webroot/testing;
 
 echo "HELLO WORLD" > /webroot/testing/file.txt;
 
