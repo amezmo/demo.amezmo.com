@@ -29,7 +29,7 @@ Route::get('/upload', function () {
 Route::post('/upload', function (Request $request) {
     // Set the disk, even though we've already specified the default one to public
     // in config/filesystems.php
-    $file = $request->file('file');
+    $file = $request->file('user_avatar');
     dump($file);
     $file->store('img', 'public');
             
