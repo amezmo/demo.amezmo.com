@@ -32,12 +32,12 @@ return [
 
         'local' => [
             'driver' => 'local',
-            'root' => env('STORAGE_DIRECTORY'),
+            'root' => storage_path('app'),
         ],
 
         'public' => [
             'driver' => 'local',
-            'root' => env('STORAGE_DIRECTORY') . '/public',
+            'root' => storage_path('app/public'),
             'url' => env('APP_URL') . '/storage',
             'visibility' => 'public',
         ],
@@ -66,6 +66,7 @@ return [
     */
 
     'links' => [
+        storage_path()         => env('STORAGE_DIRECTORY'),
         public_path('storage') => env('STORAGE_DIRECTORY') . '/public'
     ],
 
