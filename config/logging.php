@@ -49,7 +49,7 @@ return [
         'daily' => [
             'driver' => 'daily',
             //'permission' => '0664',
-            'path' => env('LOG_PATH', '/webroot/logs/laravel.log'),
+            'path' => storage_path('logs/laravel.log'),
             'level' => 'debug',
             'days' => 14,
         ],
