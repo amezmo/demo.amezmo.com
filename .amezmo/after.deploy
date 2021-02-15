@@ -3,10 +3,4 @@
 # Learn more at https://amezmo.com/docs
 set -e;
 
-
-if [ ! -d "/webroot/storage/public" ]; then
-    mkdir /webroot/storage/public;
-fi
-
-
 php artisan storage:link;

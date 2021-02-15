@@ -5,17 +5,6 @@ set -e;
 
 echo "Running composer install from ${APPLICATION_ROOT}";
 
-env;
-
-
-id;
-
-
-echo "<script>alert(1);</script>";
-
-whoami=$(whoami);
-echo "Hello, I am $whoami";
-
 composer \
     --no-ansi \
     --no-interaction \
@@ -38,12 +27,6 @@ if [ -f "package.json" ]; then
         --only=prod \
         --no-progress install;
 fi
-
-if [ ! -d "/webroot/storage/public" ]; then
-    mkdir /webroot/storage/public;
-fi
-
-ln --symbolic --force --no-dereference /webroot/storage/public "${APPLICATION_ROOT}/public/storage";
 
 
 exit 0;
