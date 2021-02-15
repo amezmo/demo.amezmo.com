@@ -13,7 +13,6 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->app->instance('path.storage', '/webroot/storage');
     }
 
     /**

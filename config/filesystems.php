@@ -66,7 +66,6 @@ return [
     */
 
     'links' => [
-        storage_path('logs')         => env('STORAGE_DIRECTORY') . '/logs',
         public_path('storage')       => env('STORAGE_DIRECTORY') . '/public'
     ],
 
