@@ -5,19 +5,9 @@ set -e;
 
 echo "Running composer install from ${APPLICATION_ROOT}";
 
-composer \
-    --no-ansi \
-    --no-interaction \
-    --optimize-autoloader \
-    --no-progress \
-    --no-dev \
-    --profile \
-    install
 
 php artisan config:cache;
 php artisan route:cache || true;
-
-php artisan migrate --no-interaction --no-ansi --force;
 
 if [ -f "package.json" ]; then
     NODE_ENV=production npm \
