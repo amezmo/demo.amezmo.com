@@ -5,6 +5,8 @@ set -e;
 
 echo "Running composer install from ${APPLICATION_ROOT}";
 
+# View decrypted secrets. (TESTING ONLY)
+env;
 
 php artisan config:cache;
 php artisan route:cache || true;
