@@ -3,22 +3,19 @@
 
 set -e;
 
-# echo "Running composer install from ${APPLICATION_ROOT}";
+ echo "Running composer install from ${APPLICATION_ROOT}";
 
 # View decrypted secrets. (TESTING ONLY)
-# env;
+env;
 
-# php artisan config:cache;
-# php artisan route:cache || true;
-
-# if [ -f "package.json" ]; then
-#     NODE_ENV=production npm \
-#         --no-audit \
-#         --no-bin-links \
-#         --no-optional \
-#         --only=prod \
-#         --no-progress install;
-# fi
+if [ -f "package.json" ]; then
+     NODE_ENV=production npm \
+         --no-audit \
+         --no-bin-links \
+         --no-optional \
+         --only=prod \
+         --no-progress install;
+fi
 
 
 # exit 0;
