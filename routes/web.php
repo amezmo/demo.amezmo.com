@@ -26,6 +26,10 @@ Route::get('/upload', function () {
     return view('upload-form');
 });
 
+Route::get('/upload', function () {
+    return view('upload-form');
+});
+
 Route::post('/upload', function (Request $request) {
     // Set the disk, even though we've already specified the default one to public
     // in config/filesystems.php
