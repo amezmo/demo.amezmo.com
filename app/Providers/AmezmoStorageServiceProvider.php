@@ -14,11 +14,11 @@ class AmezmoStorageServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        if (!App::environment('local')) {
+        if (!App::environment('local') && env('STORAGE_DIRECTORY')) {
             // Amezmo Persistent storage directory
             // https://www.amezmo.com/blog/how-to-change-the-default-storage-path-in-laravel/
-            $this->app->instance('path.storage', '/webroot/storage');
-        }            
+            $this->app->instance('path.storage', env('STORAGE_DIRECTORY'));
+        }
     }
 
     /**
