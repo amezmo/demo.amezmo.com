@@ -34,3 +34,5 @@ ln --symbolic $STORAGE_DIRECTORY/logs $APPLICATION_ROOT/storage/logs;
 
 
 ln --symbolic --no-dereference $APPLICATION_ROOT/storage/app/public $APPLICATION_ROOT/public/storage
+
+php artisan storage:link;
