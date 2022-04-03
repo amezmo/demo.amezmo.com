@@ -22,6 +22,10 @@ Route::get('/chat', function() {
     return view('websocket-chat');
 });
 
+Route::get('/health', function() {
+    return 'up';
+});
+
 Route::get('/upload', function () {
     return view('upload-form');
 });
