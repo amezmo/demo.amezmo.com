@@ -419,6 +419,8 @@ ul {
     log('attempt to reconnect has failed');
   });
   socket.on('connect_error', (err) => {
+    console.log(err);
+    console.dir(err);
     console.log(err instanceof Error); // true
     console.log(err.message); // not authorized
     console.log(err.data); // { content: "Please retry later" }
