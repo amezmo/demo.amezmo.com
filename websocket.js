@@ -7,10 +7,10 @@ dotenv.config();
 
 // the hook needs to copy the configuration
 const io = new WebSocketServer({
-    origins: process.env.APP_URL + ':443',
+    origins: ['*']
 });
 
-io.listen(5000);
+io.listen(3000);
 
 io.httpServer.on('listening', function() {
     console.log('Amezmo WebSocket server is listening on %o', io.httpServer.address());

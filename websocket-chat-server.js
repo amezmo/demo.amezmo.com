@@ -7,7 +7,7 @@ var path = require('path');
 var server = require('http').createServer(app);
 
 var io = require('socket.io')(server, {
-  origins: '*:*'
+  origins: ['*']
 });
 var port = 3000;
 
