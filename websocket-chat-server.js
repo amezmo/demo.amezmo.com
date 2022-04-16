@@ -13,7 +13,6 @@ var port = 3000;
 
 server.listen(port, () => {
   console.log('Server listening at port %d', port);
-  console.log(arguments);
 });
 
 // Routing
@@ -22,6 +21,26 @@ app.use(express.static(path.join(__dirname, 'public')));
 // Chatroom
 
 var numUsers = 0;
+
+io.on('connect', (socket) => {
+  console.log('got connect event');
+  console.log(socket);
+});
+
+io.on('connect_error', (socket) => {
+  console.log('got connect_error event');
+  console.log(socket);
+});
+
+io.on('error', (socket) => {
+  console.log('got error event');
+  console.log(socket);
+});
+
+io.on('disconnect', (socket) => {
+  console.log('got disconnect event');
+  console.log(socket);
+});
 
 io.on('connection', (socket) => {
   console.log('got new connection');
@@ -83,3 +102,5 @@ io.on('connection', (socket) => {
     }
   });
 });
+
+io.on
