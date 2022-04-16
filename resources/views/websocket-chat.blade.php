@@ -195,7 +195,7 @@ ul {
   var lastTypingTime;
   var $currentInput = $usernameInput.focus();
   
-  var socket = io.connect('ws://rt-demo2.amezmo.com', {
+  var socket = io.connect('wss://rt-demo2.amezmo.com', {
     transports: ['websocket'],
     reconnection: true,
     reconnectionAttempts: 5
