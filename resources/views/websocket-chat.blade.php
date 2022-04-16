@@ -192,7 +192,9 @@ ul {
   const $loginPage = $('.login.page');        // The login page
   const $chatPage = $('.chat.page');          // The chatroom page
 
-  const socket = io('wss://rt-demo2.amezmo.com');
+  const socket = io('wss://rt-demo2.amezmo.com', {
+    transports: ['websocket'],
+  });
 
   // Prompt for setting a username
   let username;
