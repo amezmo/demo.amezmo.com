@@ -1,14 +1,11 @@
 // Borrowed from https://github.com/socketio/socket.io/blob/master/examples/chat/index.js
 // Setup basic express server
-
-var express = require('express');
-var app = express();
-var path = require('path');
-var server = require('http').createServer(app);
-
-var io = require('socket.io')(server);
-
-var port = 3000;
+const express = require('express');
+const app = express();
+const path = require('path');
+const server = require('http').createServer(app);
+const io = require('socket.io')(server);
+const port = process.env.PORT || 3000;
 
 server.listen(port, () => {
   console.log('Server listening at port %d', port);
@@ -19,33 +16,10 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 // Chatroom
 
-var numUsers = 0;
-
-io.on('connect', (socket) => {
-  console.log('got connect event');
-  console.log(socket);
-});
-
-io.on('connect_error', (socket) => {
-  console.log('got connect_error event');
-  console.log(socket);
-});
-
-io.on('error', (socket) => {
-  console.log('got error event');
-  console.log(socket);
-});
-
-io.on('disconnect', (socket) => {
-  console.log('got disconnect event');
-  console.log(socket);
-});
+let numUsers = 0;
 
 io.on('connection', (socket) => {
-  console.log('got new connection');
-  console.log(socket);
-
-  var addedUser = false;
+  let addedUser = false;
 
   // when the client emits 'new message', this listens and executes
   socket.on('new message', (data) => {
@@ -101,5 +75,3 @@ io.on('connection', (socket) => {
     }
   });
 });
-
-io.on
